@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BM130PWZB5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BM130PWZB5');
+  </script>
+  <meta charset="utf-8">
+  <meta name="description" content="Dexterous Functional Grasping">
+  <meta name="keywords" content="Dexterous, Grasping, Reinforcement Learning, Emergent Behaviors, Sim2real">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dexterous Functional Grasping</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="./static/js/ajax.googleapis.com_ajax_libs_jquery_3.5.1_jquery.min.js"></script>
+  <script src="./static/js/isInViewport.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <link rel="icon" href="./favicon.ico?">
+
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body no-bottom-padding">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Dexterous Functional Grasping</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Anonymous CoRL submission
+            </span>
+          </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" style="padding-bottom: 0">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-2">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            While there have been significant strides in dexterous manipulation, most of it is limited to benchmark tasks like in-hand reorientation which are of limited utility in the real world. The main benefit of dexterous hands over two-fingered ones is their ability to pickup tools and other objects (including thin ones) and grasp them firmly in order to apply force. However, this task requires both a complex understanding of functional affordances as well as precise low-level control. While prior work obtains affordances from human data this approach doesn't scale to low-level control. Similarly, simulation training cannot give the robot an understanding of real-world semantics. In this paper, we aim to combine the best of both worlds to accomplish functional grasping for in-the-wild objects. We use a modular approach. First, affordances are obtained by matching corresponding regions of different objects and then a low-level policy trained in sim is run to grasp it. We propose a novel application of eigengrasps to reduce the search space of RL using a small amount of human data and find that it leads to more stable and physically realistic motion. We find that eigengrasp action space beats baselines in simulation and outperforms hardcoded grasping in real and matches or outperforms a trained human teleoperator.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- / Paper video.
+  <br/>
+  <br/> -->
+  
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-4" style="text-align: center;">All videos play at 1x speed</h2>
+      </div> 
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Hammering</h2>
+        <tr>
+          <td>
+              <h2 class="subtitle">
+                  The grasping policy generalizes to hammers of different surface properties, weights and shape. The blue hammer is heavy (1 kg) while the wooden one is smooth and hard to grip. It is robust to heavy pushes during the grasping and post-grasp phase. 
+              </h2>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="row">
+              <div class="columns is-centered">
+                <div class="col">
+                    <video playsinline autoplay loop muted src="./resources/hammers/blue_hammer_perturb.mp4" width="100%"
+                          style="border-radius:10px; "></video>
+                </div>
+                <div class="col">
+                  <video playsinline autoplay loop muted src="./resources/hammers/brown_hammer_top.mp4" width="100%"
+                        style="border-radius:10px; "></video>
+                </div>
+              </div>
+            </div>
+            <br>
+          </td>
+        </tr>
+      </div> 
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Drilling</h2>
+        <tr>
+          <td>
+              <h2 class="subtitle">
+                The same policy as above generalizes to drills which differ signficantly in shape from hammers. The red YCB drill is smaller while the green industrial drill is very large and has a highly skewed weight distribution since the weight is much heavier than the base. 
+              </h2>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="row">
+              <div class="columns is-centered">
+                <div class="col">
+                    <video playsinline autoplay loop muted src="./resources/drills/green_drill.mp4" width="100%"
+                          style="border-radius:10px; "></video>
+                </div>
+                <div class="col">
+                  <video playsinline autoplay loop muted src="./resources/drills/red_drill.mp4" width="100%"
+                        style="border-radius:10px; "></video>
+                </div>
+              </div>
+            </div>
+            <br>
+          </td>
+        </tr>
+      </div> 
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Screwing</h2>
+        <tr>
+          <td>
+              <h2 class="subtitle">
+                The grasping policy generalizes to screwdrivers of different types. The orange screwdriver is narrower and longer while the red one is fatter and shorter. 
+              </h2>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="row">
+              <div class="columns is-centered">
+                <div class="col">
+                    <video playsinline autoplay loop muted src="./resources/screwdrivers/orange_screwdriver.mp4" width="100%"
+                          style="border-radius:10px; "></video>
+                </div>
+                <div class="col">
+                  <video playsinline autoplay loop muted src="./resources/screwdrivers/red_screwdriver.mp4" width="100%"
+                        style="border-radius:10px; "></video>
+                </div>
+              </div>
+            </div>
+            <br>
+          </td>
+        </tr>
+      </div> 
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Emergent Behavior</h2>
+        <tr>
+          <td>
+              <h2 class="subtitle">
+                Here we showcase some emergent behaviors learnt by our policy. We see that the grasp is adapted on-the-fly based on interaction with the object. 
+              </h2>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="row">
+              <div class="columns is-centered">
+                <div class="col">
+                    <video playsinline autoplay loop muted src="./resources/emergent/spray_bottle_cropped.mp4" width="100%"
+                          style="border-radius:10px; margin-bottom: 10px; margin-top: 10px;"></video>
+                    <h2 class="subtitle">
+                      Since the bottle is wide, the thumb gets trapped between the palm and bottle initially but the policy moves it back to wrap around the bottle. 
+                    </h2>
+                </div>
+                <div class="col">
+                  <video playsinline autoplay loop muted src="./resources/emergent/red_drill_cropped.mp4" width="100%"
+                        style="border-radius:10px; margin-bottom: 10px; margin-top: 10px;"></video>
+                  <h2 class="subtitle">
+                    The thumb position is altered when the orientation of the drill changes to prevent it from falling out. 
+                  </h2>
+                </div>
+              </div>
+            </div>
+            <br>
+          </td>
+        </tr>
+      </div> 
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Other objects</h2>
+        <tr>
+          <td>
+              <h2 class="subtitle">
+                The same policy can also be used to functionally manipulate a range of other objects. We show examples of kitchen implements such as a spatula and two saucepans, office supplies such as a stapler, deformable objects like a teddy bear and soft dinosaur toy among others. 
+              </h2>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="row">
+              <div class="columns is-centered">
+                <div class="col">
+                    <video playsinline autoplay loop muted src="./resources/other/stapler.mp4" width="100%"
+                          style="border-radius:10px; "></video>
+                </div>
+                <div class="col">
+                  <video playsinline autoplay loop muted src="./resources/other/spatula.mp4" width="100%"
+                        style="border-radius:10px; "></video>
+                </div>
+                <div class="col">
+                  <video playsinline autoplay loop muted src="./resources/other/saucepan.mp4" width="100%"
+                        style="border-radius:10px; "></video>
+                </div>
+              </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+              <div class="columns is-centered">
+                <div class="col">
+                    <video playsinline autoplay loop muted src="./resources/other/big_bottle.mp4" width="100%"
+                          style="border-radius:10px; "></video>
+                </div>
+                <div class="col">
+                  <video playsinline autoplay loop muted src="./resources/other/shiny_saucepan.mp4" width="100%"
+                        style="border-radius:10px; "></video>
+                </div>
+                <div class="col">
+                  <video playsinline autoplay loop muted src="./resources/other/spray_bottle.mp4" width="100%"
+                        style="border-radius:10px; "></video>
+                </div>
+              </div>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+              <div class="columns is-centered">
+                <div class="col">
+                    <video playsinline autoplay loop muted src="./resources/other/teddy_bear.mp4" width="100%"
+                          style="border-radius:10px; "></video>
+                </div>
+                <div class="col">
+                  <video playsinline autoplay loop muted src="./resources/other/carrot.mp4" width="100%"
+                        style="border-radius:10px; "></video>
+                </div>
+                <div class="col">
+                  <video playsinline autoplay loop muted src="./resources/other/soup_can.mp4" width="100%"
+                        style="border-radius:10px; "></video>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </div> 
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Failure Cases</h2>
+        <tr>
+          <td>
+            <div class="row">
+              <div class="columns is-centered">
+                <div class="col">
+                    <h2 class="subtitle">
+                      The arm locks out when a heavy object is being lifted due to motor current overload and fails to complete post-grasp motion.
+                    </h2>
+                    <video playsinline autoplay loop muted src="./resources/failure/green_drill_arm_failure_360p.mp4" width="100%"
+                          style="border-radius:10px; "></video>
+                </div>
+                <div class="col">
+                  <h2 class="subtitle">
+                    Because the hand is large, it has trouble grasping small objects like the screwdrivers which fall out upon perturbation. 
+                  </h2>
+                  <video playsinline autoplay loop muted src="./resources/failure/screwdriver_orange_perturb_failure_360p.mp4" width="100%"
+                        style="border-radius:10px; "></video>
+                </div>
+              </div>
+            </div>
+            <br>
+          </td>
+        </tr>
+      </div> 
+    </div>
+  </div>
+</section>
+
+<script>
+  var mainLoopId = setInterval(function(){
+        $('video').not('#teaser').each(function(){
+      if ($(this).is(":in-viewport")) {
+          $(this)[0].play();
+      } else {
+          $(this)[0].pause();
+      }
+      })
+    },200);
+</script>
+
+</body>
+</html>
