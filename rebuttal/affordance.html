@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BM130PWZB5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-BM130PWZB5');
+  </script>
+  <meta charset="utf-8">
+  <meta name="description" content="Dexterous Functional Grasping">
+  <meta name="keywords" content="Dexterous, Grasping, Reinforcement Learning, Emergent Behaviors, Sim2real">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dexterous Functional Grasping</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="../static/css/bulma.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="../static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="../static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="../static/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="../static/js/ajax.googleapis.com_ajax_libs_jquery_3.5.1_jquery.min.js"></script>
+  <script src="../static/js/isInViewport.min.js"></script>
+  <script defer src="../static/js/fontawesome.all.min.js"></script>
+  <script src="../static/js/bulma-carousel.min.js"></script>
+  <script src="../static/js/bulma-slider.min.js"></script>
+  <script src="../static/js/index.js"></script>
+
+  <link rel="icon" href="../favicon.ico?">
+
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body no-bottom-padding">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Affordance Prediction Analysis</h1>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3" style="text-align: center; padding-bottom: 10px;"> Qualitative Comparison against baselines </h2>
+        <tr>
+          <td>
+              <h2 class="subtitle">
+                We compare our affordance model against two baselines using CLIP features - ClipSeg and CliPort on the RAVENS dataset. Spatula and Sauce Pan are seen at training time while Hammer is unseen for CLiPort. For our method, we annotate one exemplar from each category. 
+              </h2>
+          </td>
+        </tr>
+        <br>
+
+        
+        <div class="row">
+          <div class="columns is-centered">
+            <div class="col">
+                <h2 class="title is-3" style="text-align: center; padding-bottom: 10px;">Hammer</h2>
+            
+                <table>
+                  <tr>
+                    <td>
+                      <img src="../resources/rebuttal/affordance_comparison/hammer/hammer_img_95.png" width="80%" alt="CLIPORT" title="CLIPORT">
+                    </td>
+                    <td>
+                      <img src="../resources/rebuttal/affordance_comparison/hammer/hammer_img_95_clipseg.png" width="80%" alt="Dolor sit" title="Dolor sit">
+                    </td>
+                    <td>
+                      <img src="../resources/rebuttal/affordance_comparison/hammer/hammer_img_95_heatmap.png" width="80%" alt="Amet consectetur" title="Amet consectetur">
+                    </td>
+                    <td>
+                      <img src="../resources/rebuttal/affordance_comparison/hammer/hammer_img_95_affcors.png" width="80%" alt="Amet consectetur" title="Amet consectetur">
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td><h4 style="text-align: center; padding-bottom: 10px;">Ground Truth</h4></td>
+                    <td><h4 style="text-align: center; padding-bottom: 10px;">ClipSeg</h4></td>
+                    <td><h4 style="text-align: center; padding-bottom: 10px;">CliPort</h4></td>
+                    <td><h4 style="text-align: center; padding-bottom: 10px;">Ours</h4></td>
+                  </tr>
+                </table>
+
+            </div>
+          </div>
+        </div>
+
+        <br><br>
+
+        <div class="row">
+          <div class="columns is-centered">
+            <div class="col">
+                <h2 class="title is-3" style="text-align: center; padding-bottom: 10px;">Sauce Pan</h2>
+
+                <table>
+                  <tr>
+                    <td>
+                      <img src="../resources/rebuttal/affordance_comparison/frypan/frypan_img_63.png" width="80%" alt="CLIPORT" title="CLIPORT">
+                    </td>
+                    <td>
+                      <img src="../resources/rebuttal/affordance_comparison/frypan/frypan_img_63_clipseg.png" width="80%" alt="Dolor sit" title="Dolor sit">
+                    </td>
+                    <td>
+                      <img src="../resources/rebuttal/affordance_comparison/frypan/frypan_img_63_heatmap.png" width="80%" alt="Amet consectetur" title="Amet consectetur">
+                    </td>
+                    <td>
+                      <img src="../resources/rebuttal/affordance_comparison/frypan/frypan_img_63_affcors.png" width="80%" alt="Amet consectetur" title="Amet consectetur">
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td><h4 style="text-align: center; padding-bottom: 10px;">Ground Truth</h4></td>
+                    <td><h4 style="text-align: center; padding-bottom: 10px;">ClipSeg</h4></td>
+                    <td><h4 style="text-align: center; padding-bottom: 10px;">CliPort</h4></td>
+                    <td><h4 style="text-align: center; padding-bottom: 10px;">Ours</h4></td>
+                  </tr>
+                </table>
+
+            </div>
+          </div>
+        </div>
+
+        <br><br>
+
+        <div class="row">
+          <div class="columns is-centered">
+            <div class="col">
+                <h2 class="title is-3" style="text-align: center; padding-bottom: 10px;">Spatula</h2>
+
+                <table>
+                  <tr>
+                    <td>
+                      <img src="../resources/rebuttal/affordance_comparison/spatula/spatula_img_86.png" width="80%" alt="CLIPORT" title="CLIPORT">
+                    </td>
+                    <td>
+                      <img src="../resources/rebuttal/affordance_comparison/spatula/spatula_img_86_clipseg.png" width="80%" alt="Dolor sit" title="Dolor sit">
+                    </td>
+                    <td>
+                      <img src="../resources/rebuttal/affordance_comparison/spatula/spatula_img_86_heatmap.png" width="80%" alt="Amet consectetur" title="Amet consectetur">
+                    </td>
+                    <td>
+                      <img src="../resources/rebuttal/affordance_comparison/spatula/spatula_img_86_affcors.png" width="80%" alt="Amet consectetur" title="Amet consectetur">
+                    </td>
+                  </tr>
+                
+                  <tr>
+                    <td><h4 style="text-align: center; padding-bottom: 10px;">Ground Truth</h4></td>
+                    <td><h4 style="text-align: center; padding-bottom: 10px;">ClipSeg</h4></td>
+                    <td><h4 style="text-align: center; padding-bottom: 10px;">CliPort</h4></td>
+                    <td><h4 style="text-align: center; padding-bottom: 10px;">Ours</h4></td>
+                  </tr>
+                </table>
+
+            </div>
+          </div>
+        </div>
+
+      </div> 
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Using CLIP Features for Affordance Prediction</h2>
+        <tr>
+          <td>
+              <h2 class="subtitle">
+                While CLIP features are great at identifying objects with open vocabulary generalization, it struggles with localizing specific object parts or affordances. Below is an example prediction from ClipSeg for the image of a hammer with the prompt "hammer handle".
+              </h2>
+          </td>
+        </tr>
+        <tr>
+          <td>
+
+            <br><br>
+            <div class="row">
+              <div class="columns is-centered">
+                <div class="col">
+                    <!-- <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Drill</h2> -->
+                    <img style="height: 400px; width: 560px; border-radius:10px; " src="../resources/rebuttal/affordance_comparison/clipseg/hammer.jpg" ></img>
+                    <img style="height: 400px; width: 560px; border-radius:10px; " src="../resources/rebuttal/affordance_comparison/clipseg/hammer_handle.png" ></img>
+                </div>
+              </div>
+            </div>
+
+            <br>
+          </td>
+        </tr>
+      </div> 
+    </div>
+  </div>
+</section>
+
+<script>
+  var mainLoopId = setInterval(function(){
+        $('video').not('#teaser').each(function(){
+      if ($(this).is(":in-viewport")) {
+          $(this)[0].play();
+      } else {
+          $(this)[0].pause();
+      }
+      })
+    },200);
+</script>
+
+</body>
+</html>
